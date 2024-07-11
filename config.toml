@@ -1,0 +1,17 @@
+theme="github_dark_high_contrast"
+
+[keys.normal]
+ret="insert_mode"
+C-s=[":write"]
+C-x=[":write-all", ":qa!"]
+
+[keys.insert]
+C-s=[":write"]
+C-x=[":write-all!", ":qa!"]
+C-c=":clipboard-yank"
+C-v=":clipboard-paste-before"
+C-z=["commit_undo_checkpoint","undo"]
+C-y="redo"
+
+[editor.soft-wrap]
+enable=true
