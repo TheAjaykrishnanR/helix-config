@@ -5,7 +5,7 @@ ret="insert_mode"
 C-s=[":write"]
 C-x=[":write-all", ":qa!"]
 C-S-c=":clipboard-yank"
-C-z="undo"]
+C-z="undo"
 
 [keys.insert]
 C-s=[":write", "commit_undo_checkpoint"]
