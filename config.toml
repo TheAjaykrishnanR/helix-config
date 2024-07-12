@@ -1,17 +1,31 @@
-theme="github_dark_high_contrast"
+theme="bogster"
 
 [keys.normal]
 ret="insert_mode"
 C-s=[":write"]
 C-x=[":write-all", ":qa!"]
+C-S-c=":clipboard-yank"
+C-z="undo"]
 
 [keys.insert]
-C-s=[":write"]
+C-s=[":write", "commit_undo_checkpoint"]
 C-x=[":write-all!", ":qa!"]
 C-c=":clipboard-yank"
 C-v=":clipboard-paste-before"
 C-z=["commit_undo_checkpoint","undo"]
 C-y="redo"
+C-w="normal_mode"
+C-ret="normal_mode"
+ret=["insert_newline", "commit_undo_checkpoint"]
+right=["move_char_right", "commit_undo_checkpoint"]
+left=["move_char_left", "commit_undo_checkpoint"]
+up=["move_line_up", "commit_undo_checkpoint"]
+down=["move_line_down", "commit_undo_checkpoint"]
+S-left="move_prev_word_start"
+S-right="move_next_word_start"
 
 [editor.soft-wrap]
 enable=true
+
+[keys.select]
+C-c=":clipboard-yank"
