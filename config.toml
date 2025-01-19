@@ -40,7 +40,7 @@ A-S-right="move_next_word_start"
 C-d="delete_selection"
 C-S-up="extend_line_up"
 C-S-down="extend_line_down"
-
+esc="no_op"
 
 [editor.soft-wrap]
 enable=true
