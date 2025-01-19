@@ -1,28 +1,46 @@
-theme="bogster"
+theme="catppuccin_macchiato"
 
 [keys.normal]
 ret="insert_mode"
 C-s=[":write"]
 C-x=[":write-all", ":qa!"]
-C-S-c=":clipboard-yank"
+C-c=":clipboard-yank"
 C-z="undo"
+C-y="redo"
+C-ret="insert_mode"
+up=["move_line_up", "commit_undo_checkpoint"]
+down=["move_line_down", "commit_undo_checkpoint"]
+C-left="goto_line_start"
+C-right="goto_line_end"
+C-S-left="extend_prev_word_start"
+C-S-right="extend_next_word_start"
+A-S-left="move_prev_word_start"
+A-S-right="move_next_word_start"
+C-d="delete_selection"
+C-S-up="extend_line_up"
+C-S-down="extend_line_down"
 
 [keys.insert]
-C-s=[":write", "commit_undo_checkpoint"]
+ret=["insert_newline", "commit_undo_checkpoint"]
+C-s=[":write", "commit_undo_checkpoint", "normal_mode"]
 C-x=[":write-all!", ":qa!"]
 C-c=":clipboard-yank"
 C-v=":clipboard-paste-before"
 C-z=["commit_undo_checkpoint","undo"]
 C-y="redo"
-C-w="normal_mode"
 C-ret="normal_mode"
-ret=["insert_newline", "commit_undo_checkpoint"]
-right=["move_char_right", "commit_undo_checkpoint"]
-left=["move_char_left", "commit_undo_checkpoint"]
 up=["move_line_up", "commit_undo_checkpoint"]
 down=["move_line_down", "commit_undo_checkpoint"]
-S-left="move_prev_word_start"
-S-right="move_next_word_start"
+C-left="goto_line_start"
+C-right="goto_line_end"
+C-S-left="extend_prev_word_start"
+C-S-right="extend_next_word_start"
+A-S-left="move_prev_word_start"
+A-S-right="move_next_word_start"
+C-d="delete_selection"
+C-S-up="extend_line_up"
+C-S-down="extend_line_down"
+
 
 [editor.soft-wrap]
 enable=true
