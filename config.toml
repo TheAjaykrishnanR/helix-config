@@ -23,7 +23,7 @@ C-S-down="extend_line_down"
 [keys.insert]
 ret=["insert_newline", "commit_undo_checkpoint"]
 C-s=[":write", "commit_undo_checkpoint", "normal_mode"]
-C-x=[":write-all!", ":qa!"]
+C-x=[":clipboard-yank", "delete_selection"]
 C-c=":clipboard-yank"
 C-v=":clipboard-paste-before"
 C-z=["commit_undo_checkpoint","undo"]
