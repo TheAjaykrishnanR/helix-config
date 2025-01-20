@@ -1,4 +1,4 @@
-theme="catppuccin_macchiato"
+theme="autumn_night"
 
 [keys.normal]
 ret="insert_mode"
