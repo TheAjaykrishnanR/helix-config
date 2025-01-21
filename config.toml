@@ -3,7 +3,6 @@ theme="autumn_night"
 [keys.normal]
 ret="insert_mode"
 C-s=[":write"]
-C-x=[":write-all", ":qa!"]
 C-c=":clipboard-yank"
 C-z="undo"
 C-y="redo"
